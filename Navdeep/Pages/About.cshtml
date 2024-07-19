@@ -1,0 +1,100 @@
+﻿@page
+@model AboutModel
+@{
+    ViewData["Title"] = "About";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: calc(100% - 22px);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            margin: 5px;
+            background: #007bff;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+
+        .result-box {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #fff;
+            display: inline-block;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Calculator</h1>
+        <form action="" method="POST">
+            <div>
+                <input type="text" placeholder="Enter Num1" name="num1" required>
+                <input type="text" placeholder="Enter Num2" name="num2">
+            </div>
+            <div>
+                <input type="submit" value="+" name="+">
+                <input type="submit" value="-" name="-">
+                <input type="submit" value="*" name="*">
+                <input type="submit" value="/" name="/">
+            </div>
+            <div>
+                <input type="submit" value="PWR" name="PWR">
+                <input type="submit" value="SQR" name="SQR">
+                <input type="submit" value="CUBE" name="CUBE">
+            </div>
+            <div class="result-box">
+                <p>Result: @ViewData["Result"]</p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
